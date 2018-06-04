@@ -15,11 +15,31 @@ def shape(sides):
 
     return valid_shapes[sides]
     
+    
+def sides(shape):
+    """Given a shape, tell us the number of sides.
+    
+    Args:
+      shape (str) : Name of shape
+      
+    Returns:
+      int : Number of sites
+      
+    """
+    
+    assert shape in valid_shapes, "Not a valid shape."
+    
+    return valid_shapes.index(shape)
+    
+    
+    
 if __name__ == '__main__':
 
     print('I know about the following shapes:')
     
     for valid_shape in valid_shapes:
         if valid_shape is not None:
-            print(valid_shape)
+            num_sides = sides(valid_shape)
+            print(' %s (sides=%s)' %(valid_shape, num_sides))
+            
             
