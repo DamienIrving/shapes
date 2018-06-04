@@ -1,0 +1,23 @@
+#!/usr/env/bin python
+import argparse
+from shapes import shapes as s
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.description = 'A utility for working with shapes'
+    
+    parser.add_argument('action', choices=('sides', 'shape'), type=str)
+    parser.add_argument('-s', '--shape', help='name of shape', type=str)
+    parser.add_argument('-n', '--nsides', help='number of sides', type=int)
+    
+    args = parser.parse_args()
+    
+    if args.action == 'sides':
+        result = s.sides(args.shape)
+    elif args.action == 'shape':
+        result = s.shape(args.nsides)
+    else:
+        raise Exception('I have no idea what you want')
+        
+    print(result)
+ 

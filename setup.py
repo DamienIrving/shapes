@@ -9,6 +9,7 @@ setup(
     license='MIT',
     zip_safe=False,
     packages=['shapes'],
+    scripts=['bin/shapes'],
     )
     
 
