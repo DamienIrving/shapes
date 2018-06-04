@@ -14,3 +14,12 @@ def shape(sides):
     """
 
     return valid_shapes[sides]
+    
+if __name__ == '__main__':
+
+    print('I know about the following shapes:')
+    
+    for valid_shape in valid_shapes:
+        if valid_shape is not None:
+            print(valid_shape)
+            
