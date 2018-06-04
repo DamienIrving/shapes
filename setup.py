@@ -10,6 +10,8 @@ setup(
     zip_safe=False,
     packages=['shapes'],
     scripts=['bin/shapes'],
+    tests_require=['pytest', 'pytest-cov'],
+    setup_requires=['pytest-runner'],
     )
     
 
